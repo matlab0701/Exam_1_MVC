@@ -1,0 +1,32 @@
+@using Domain.DTOs.Orders
+
+@model CreateOrderDto
+
+@{
+    ViewData["Title"] = "Создание заказа";
+}
+
+<h2>Создать заказ</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CustomerId">Покупатель</label>
+        <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.Customers">
+            <option value="">-- Выберите покупателя --</option>
+        </select>
+    </div>
+
+    <h4>Товары</h4>
+    <div id="items-container">
+        <div class="form-row mb-2">
+            <input type="number" name="Items[0].ProductId" class="form-control col" placeholder="ID товара" />
+            <input type="number" name="Items[0].Quantity" class="form-control col ml-2" placeholder="Количество" />
+        </div>
+        <div class="form-row mb-2">
+            <input type="number" name="Items[1].ProductId" class="form-control col" placeholder="ID товара" />
+            <input type="number" name="Items[1].Quantity" class="form-control col ml-2" placeholder="Количество" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Создать</button>
+</form>

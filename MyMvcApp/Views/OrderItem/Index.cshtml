@@ -1,0 +1,38 @@
+@using Domain.DTOs.OrderItems
+@model List<GetOrderItemDto>
+
+@{
+    ViewData["Title"] = "OrderUtem list ";
+}
+
+<h2>OrderUtem list</h2>
+
+<p class="btn btn-info" style="width:120px;height:40px;display: flex; justify-content: center; align-items: center;">
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>OrderId</th>
+        <th>ProductId</th>
+        <th>Quantity</th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.ProductId</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

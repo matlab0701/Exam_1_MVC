@@ -1,0 +1,41 @@
+@using Domain.DTOs.Orders
+@model GetOrderDto
+
+@{
+    ViewData["Title"] = "Детали заказа";
+}
+
+<h2>Детали заказа №@Model.Id</h2>
+<p><strong>Дата:</strong> @Model.OrderDate.ToShortDateString()</p>
+<p><strong>Покупатель:</strong> @Model.Customer.FullName</p>
+
+<table class="table table-bordered table-dark text-center">
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Товар</th>
+            <th>Кол-во</th>
+            <th>Цена за 1 шт</th>
+            <th>Общая сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+    using Domain.DTOs.Orders;
+        @for (int i = 0; i < Model.Items.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model.Items[i].ProductName</td>
+                <td>@Model.Items[i].Quantity</td>
+                <td>@Model.Items[i].Price сомони</td>
+                <td>@Model.Items[i].totalItem сомони</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h4>Общая сумма заказа: @Model.Total сомони</h4>
+
+
+
+

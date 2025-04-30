@@ -1,0 +1,57 @@
+@model Domain.Responses.PagedResponse<List<Domain.DTOs.Orders.GetOrderDto>>
+
+@{
+    ViewData["Title"] = "Orders List";
+}
+
+<h2>Orders</h2>
+
+<form method="get" class="form-inline mb-3">
+    <input type="date" name="From" class="form-control mr-2" />
+    <input type="date" name="To" class="form-control mr-2" />
+    <button type="submit" class="btn btn-outline-primary">Filter</button>
+</form>
+
+<table class="table table-bordered table-dark text-center">
+    <thead>
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Товар</th>
+            <th scope="col">Кол-во</th>
+            <th scope="col">Цена за 1 шт</th>
+            <th scope="col">Общая сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+
+            foreach (var product in item.Items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.Quantity</td>
+                    <td>@product.Price сомони</td>
+                    <td>@product.totalItem сомони</td>
+                </tr>
+            }
+
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        }
+    </tbody>
+</table>
+<nav>
+    <ul class="pagination">
+        @for (int i = 1; i <= Math.Ceiling((double)Model.TotalRecords / Model.PageSize); i++)
+        {
+            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@i">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
