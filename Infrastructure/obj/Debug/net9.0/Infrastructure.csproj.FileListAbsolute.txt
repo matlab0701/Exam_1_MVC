@@ -13,3 +13,4 @@ C:\Users\HP\Desktop\Web_Projects\Exam_1\Infrastructure\obj\Debug\net9.0\Infrastr
 C:\Users\HP\Desktop\Web_Projects\Exam_1\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 C:\Users\HP\Desktop\Web_Projects\Exam_1\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\HP\Desktop\Web_Projects\Exam_1\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+C:\Users\HP\Desktop\Web_Projects\Exam_1\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json

@@ -202,3 +202,4 @@ C:\Users\HP\Desktop\Web_Projects\Exam_1\MyMvcApp\bin\Debug\net9.0\ru\Microsoft.C
 C:\Users\HP\Desktop\Web_Projects\Exam_1\MyMvcApp\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\HP\Desktop\Web_Projects\Exam_1\MyMvcApp\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\HP\Desktop\Web_Projects\Exam_1\MyMvcApp\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\HP\Desktop\Web_Projects\Exam_1\MyMvcApp\obj\Debug\net9.0\MyMvcApp.sourcelink.json
